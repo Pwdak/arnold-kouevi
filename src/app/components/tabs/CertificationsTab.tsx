@@ -6,7 +6,6 @@ import { Modal } from '@/app/components/ui/Modal';
 import { Dialog } from '@headlessui/react';
 import { ExternalLink } from 'lucide-react';
 
-// Le tableau des certifications avec la syntaxe corrigée
 const certifications = [
     { name: 'Google Cloud Certified Associate Cloud Engineer', issuer: 'Google Cloud', logo: '/logos/google-cloud.svg', url: 'https://www.credly.com/badges/8edc48d4-62f8-4a5e-afc2-664bac2a7623/public_url' },
     { name: 'Ethical Hacker', issuer: 'Cisco Networking Academy', logo: '/logos/cisco.svg', url: 'https://www.credly.com/badges/2dad3f6a-b747-4f97-b5ad-04742e89f991/public_url' },
