@@ -28,9 +28,51 @@ export default function ProjectsTab() {
     useEffect(() => {
         async function fetchProjects() {
             try {
-                const res = await fetch(`https://api.github.com/users/alex-dembele/repos?sort=updated&per_page=100`);
+                const USERNAME = 'alex-dembele';
+                
+                // Fetch all repos
+                const res = await fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=100`);
                 if (!res.ok) throw new Error(`Erreur API GitHub: ${res.status}.`);
-                setProjects(await res.json());
+                const allRepos = await res.json();
+
+                // Get owned repos (excluding forks)
+                const ownedRepos = allRepos.filter((repo: any) => !repo.fork && repo.owner.login === USERNAME);
+                
+                // Get contributed repos from public events
+                const eventRes = await fetch(`https://api.github.com/users/${USERNAME}/events/public?per_page=300`);
+                const events = await eventRes.json();
+                
+                const contributedRepoNames = new Set<string>();
+                events.forEach((event: any) => {
+                    if (event.repo && event.type === 'PushEvent') {
+                        const repoName = event.repo.name;
+                        // Exclude owned repos
+                        if (!repoName.startsWith(`${USERNAME}/`)) {
+                            contributedRepoNames.add(repoName);
+                        }
+                    }
+                });
+
+                // Fetch details of contributed repos
+                const contributedRepos: GitHubProject[] = [];
+                for (const repoFullName of contributedRepoNames) {
+                    try {
+                        const repoRes = await fetch(`https://api.github.com/repos/${repoFullName}`);
+                        if (repoRes.ok) {
+                            const repoData = await repoRes.json();
+                            // Only add if not a fork
+                            if (!repoData.fork) {
+                                contributedRepos.push(repoData);
+                            }
+                        }
+                    } catch (err) {
+                        // Silently skip on error
+                    }
+                }
+
+                // Combine: owned repos first, then contributed repos
+                const validProjects = [...ownedRepos, ...contributedRepos];
+                setProjects(validProjects);
             } catch (err) { setError((err as Error).message); } finally { setLoading(false); }
         }
         fetchProjects();
