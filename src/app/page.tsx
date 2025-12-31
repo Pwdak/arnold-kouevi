@@ -36,7 +36,7 @@ export default function Home() {
             <div className="w-full max-w-5xl mx-auto">
                 {/* --- Section Entête / Profil --- */}
                 <div className="flex flex-col items-center mb-8 text-center">
-                    <h1 className="text-3xl md:text-4xl font-bold text-primary">ALEXANDRE DEMBELE</h1>
+                    <h1 className="text-3xl md:text-4xl font-bold text-primary">ARNOLD KOUEVI</h1>
                     <p className="text-base md:text-lg text-secondary mt-1">Systems & Network Engineer | Cloud & DevOps | Cybersecurity</p>
                 </div>
 

@@ -1,4 +1,4 @@
-# Alexandre Dembele's Portfolio
+# Arnold Kouevi's Portfolio
 
 A modern and interactive professional portfolio built with Next.js 14, TypeScript, and Tailwind CSS. This project is optimized for free deployment on Vercel.
 

@@ -11,8 +11,8 @@ export interface GitHubProject { id: number; name: string; html_url: string; des
 export interface ProjectDetails { detailedDescription: string; techStack: string[]; }
 
 const projectDetailsMap: Record<string, ProjectDetails> = {
-    'portofolio-alex-dembele': { detailedDescription: "Ce portfolio a été construit avec Next.js pour un rendu côté serveur rapide, TypeScript pour la robustesse du code, et Tailwind CSS pour un design moderne et responsive. L'interactivité est gérée par Framer Motion. Le défi était de créer une expérience utilisateur fluide et un design qui reflète des compétences techniques avancées.", techStack: ["nextjs", "react", "typescript", "tailwind", "framermotion"], },
-    'k8s-multi-cloud-deployment': { detailedDescription: "Déploiement multi-cloud (AWS, GCP, Azure) d'une application sur Kubernetes. L'infrastructure est gérée via Terraform (Infrastructure as Code) pour une reproductibilité parfaite. Les manifestes Kubernetes sont gérés avec Helm et le déploiement continu est assuré par ArgoCD.", techStack: ["kubernetes", "docker", "aws", "azure", "google-cloud", "terraform", "helm", "argocd"]},
+    'portofolio-arnold-kouevi': { detailedDescription: "Ce portfolio a été construit avec Next.js pour un rendu côté serveur rapide, TypeScript pour la robustesse du code, et Tailwind CSS pour un design moderne et responsive. L'interactivité est gérée par Framer Motion. Le défi était de créer une expérience utilisateur fluide et un design qui reflète des compétences techniques avancées.", techStack: ["nextjs", "react", "typescript", "tailwind", "framermotion"], },
+    'k8s-multi-cloud-deployment': { detailedDescription: "Déploiement multi-cloud (AWS, GCP, Azure) d'une application sur Kubernetes, techStack: ["kubernetes", "docker", "aws", "azure", "google-cloud", "terraform", "helm", "argocd"]},
     // Ajoutez vos autres projets ici...
 };
 
@@ -27,7 +27,7 @@ export default function ProjectsTab() {
     useEffect(() => {
         async function fetchProjects() {
             try {
-                const USERNAME = 'alex-dembele';
+                const USERNAME = 'Pwdak';
                 
                 // Fetch all repos
                 const res = await fetch(`https://api.github.com/users/${USERNAME}/repos?sort=updated&per_page=100`);

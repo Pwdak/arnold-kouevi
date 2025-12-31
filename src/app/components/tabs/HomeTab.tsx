@@ -6,19 +6,15 @@ import { MdEmail } from 'react-icons/md';
 
 // --- Données pour les liens et compétences ---
 const socialLinks = [
-    { icon: MdEmail, url: 'mailto:alexandredembele16@gmail.com', name: 'Email' },
-    { icon: FaLinkedin, url: 'https://linkedin.com/in/alexandre-dembele-b80a01225', name: 'LinkedIn' },
-    { icon: FaMedium, url: '#', name: 'Medium' },
-    { icon: FaTwitter, url: 'https://x.com/al3x_dembele', name: 'Twitter (X)' },
-    { icon: FaInstagram, url: 'https://www.instagram.com/xdembouz', name: 'Instagram' },
-    { icon: FaFacebook, url: 'https://www.facebook.com/share/14H76PshByi/?mibextid=wwXIfr', name: 'Facebook' },
+    { icon: MdEmail, url: 'mailto:koueviarnold@gmail.com', name: 'Email' },
+    { icon: FaLinkedin, url: 'https://linkedin.com/in/arnold-kouevi', name: 'LinkedIn' },
 ];
 
 const skillCategories = [
     { 
         icon: Cloud, 
         title: "Cloud & Infrastructure", 
-        skills: ["aws", "kubernetes", "docker", "openstack", "azure", "google-cloud"] 
+        skills: ["aws", "kubernetes", "docker", "azure", "google-cloud"] 
     },
     { 
         icon: Zap, 
@@ -28,7 +24,7 @@ const skillCategories = [
     { 
         icon: Lock, 
         title: "Security & Network", 
-        skills: ["vpn", "iam", "cisco", "pfsense"] 
+        skills: ["vpn", "iam", "ssl"] 
     },
     {
         icon: Monitor,
@@ -45,7 +41,7 @@ export default function HomeTab() {
             <div className="lg:col-span-2 space-y-6 flex flex-col items-center lg:items-start text-center lg:text-left">
                 <h2 className="text-3xl font-bold text-accent">About Me</h2>
                 <p className="text-secondary leading-relaxed">
-                    Cloud, DevOps, and Cybersecurity Engineer passionate about automating and securing infrastructure. I transform complex challenges into high-performance, resilient systems, leveraging extensive expertise with tools like AWS, Kubernetes, and Docker.
+                    Linux, Cloud, and DevOps Engineer passionate about automating infrastructure. I make to run applications into high-performance, resilient systems, leveraging extensive expertise with tools like AWS, Kubernetes, and Docker.
                 </p>
 
                 <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
@@ -57,7 +53,7 @@ export default function HomeTab() {
                     ))}
                 </div>
 
-                <a href="/CV_Alexandre_Dembele.pdf" download
+                <a href="/Arnold_Kouevi_Admin_Linux.pdf" download
                    className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 text-accent font-semibold rounded-full border border-accent/30 hover:bg-accent/20 transition-colors">
                     <Download size={18} />
                     Download my resume

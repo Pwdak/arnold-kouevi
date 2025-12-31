@@ -8,8 +8,8 @@ import { CursorTrail } from './components/CursorTrail';
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Alexandre Dembele | Systems & Network Engineer | Cloud & DevOps | Cybersecurity",
-  description: "Portfolio of Alexandre Dembele, specialized in Cloud, DevOps and Cybersecurity, based on his CV.",
+  title: "Arnold Kouevi | Systems & Network Engineer | Cloud & DevOps | Cybersecurity",
+  description: "Portfolio of Arnold Kouevi, specialized in Cloud, DevOps and Cybersecurity, based on his CV.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
