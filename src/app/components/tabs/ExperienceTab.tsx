@@ -5,45 +5,40 @@ import { Badge } from '@/app/components/ui/Badge';
 
 const experiences = [
     {
-        role: "System Administrator",
-        company: "NEXAH SARL",
-        location: "Douala, Cameroon",
-        logo: "/logos/nexah.svg", 
-        date: "April 2023 - Present",
+        role: "Linux System Administrator / DevOps",
+        company: "ANID – TOGO",
+        location: "Lomé, TOGO",
+        logo: "/logos/anid.png", 
+        date: "Sept. 2023 – Present",
         tasks: [
-            "Migrated an AWS architecture to Kubernetes",
-            "Managed AWS cloud infrastructure",
-            "Orchestrated applications with Kubernetes & Helm, monitored with Prometheus.",
-            "Automated CI/CD deployments with GitHub Actions (reduced deployment times by 40%)",
-            "Optimized cloud costs (-15% through Docker & Kubernetes containerization)",
-            "Strengthened security with IAM, IPSec VPN, and advanced monitoring."
+            "Managed VMware environment (vCenter, ESXi, snapshots, migration)",
+            "Deployed and administered Kubernetes & OpenShift clusters",
+            "Automated tasks with Ansible and Bash",
+            "Monitored systems with Nagios, Prometheus and Grafana",
+            "Managed backups with Veeam Backup",
+            "Managed user access and integration with Keycloak",
+            "Deployed containerized applications with Docker",
+            "Managed CI/CD pipelines with Jenkins, Git, Terraform"
         ],
-        tech: ["AWS", "Kubernetes", "Docker", "Terraform", "Helm", "ArgoCD", "Prometheus", "CI/CD"]
+        tech: ["VMware", "Kubernetes", "OpenShift", "Ansible", "Jenkins", "Prometheus", "Grafana", "Docker", "Keycloak"]
     },
     {
-        role: "IT Intern",
-        company: "COMETAL SA",
-        location: "Douala, Cameroon",
-        logo: "/logos/cometal.svg", 
-        date: "November 2021 - January 2022",
+        role: "Linux System Administrator",
+        company: "ActioNet",
+        location: "Virginia, USA",
+        logo: "/logos/actionet.png", 
+        date: "Aug 2019 – Aug 2023",
         tasks: [
-            "Administered and maintained Windows Server systems.",
-            "Managed backups and monitored system performance."
+            "Administered Linux servers (RedHat, CentOS, Ubuntu) on VMware and AWS",
+            "Monitored via Zabbix, Nagios",
+            "Installed and configured LAMP servers, Apache, NGINX",
+            "Optimized web servers with Varnish",
+            "Managed databases via PhpMyAdmin",
+            "Automated tasks via Ansible (20% reduction in management time)",
+            "Implemented Zabbix, ELK Stack (Elasticsearch, Logstash, Kibana)",
+            "Provided Level 2 and 3 incident support"
         ],
-        tech: ["Windows Server", "Backup Solutions", "System Monitoring"]
-    },
-     {
-        role: "Network Administrator Intern",
-        company: "SAUNYA Cosmetics Sarl",
-        location: "Douala, Cameroon",
-        logo: "/logos/saunya.png", 
-        date: "November 2020 - October 2021",
-        tasks: [
-            "Deployed a private OpenStack cloud.",
-            "Installed and configured a pfSense captive portal.",
-            "Set up a datacenter with rack servers and a Proxmox cluster."
-        ],
-        tech: ["OpenStack", "pfSense", "Proxmox", "Rack Servers"]
+        tech: ["Linux", "AWS", "Ansible", "Zabbix", "ELK Stack", "Apache", "Nginx", "MySQL"]
     }
 ];
 

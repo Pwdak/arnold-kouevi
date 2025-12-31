@@ -7,8 +7,12 @@ import { Dialog } from '@headlessui/react';
 import { ExternalLink } from 'lucide-react';
 
 const certifications = [
-    { name: 'AWS Certified Solutions Architect – Associate', issuer: 'AWS', logo: '/logos/aws.svg', url: 'https://www.credly.com/badges/2aa15d2c-418a-4e37-ad94-45a9208079b8/public_url' },
-    { name: 'Linux System Administrator', issuer: 'CompTIA', logo: '/logos/comptia.svg', url: 'https://www.credly.com/badges/51164211-5a39-45d5-9553-0a70e56ce149/public_url' },
+    { name: 'AWS Certified Solutions Architect – Associate', issuer: 'AWS', logo: '/logos/aws.svg', url: 'https://aws.amazon.com/certification/certified-solutions-architect-associate/' },
+    { name: 'CompTIA Linux+ Certification', issuer: 'CompTIA', logo: '/logos/comptia.svg', url: 'https://www.comptia.org/certifications/linux' },
+    { name: 'Linux System Administration', issuer: 'OpenClassrooms', logo: '/logos/openclassrooms.png', url: '#' },
+    { name: 'Linux Server & Service Management', issuer: 'OpenClassrooms', logo: '/logos/openclassrooms.png', url: '#' },
+    { name: 'Ansible for Automation', issuer: 'OpenClassrooms', logo: '/logos/openclassrooms.png', url: '#' },
+    { name: 'Cloud with AWS', issuer: 'OpenClassrooms', logo: '/logos/openclassrooms.png', url: '#' },
 ];
 
 type Certification = typeof certifications[0];
