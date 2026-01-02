@@ -105,7 +105,7 @@ export default function ResumeTab() {
                             <div>
                                 <h3 className="font-bold text-gray-800 text-sm mb-1">Cloud & Virtualization</h3>
                                 <div className="flex flex-wrap gap-1">
-                                    {['AWS', 'VMware', 'OpenShift', 'OpenStack'].map(s => (
+                                    {['AWS', 'VMware'].map(s => (
                                         <span key={s} className="bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium">{s}</span>
                                     ))}
                                 </div>
@@ -114,7 +114,7 @@ export default function ResumeTab() {
                             <div>
                                 <h3 className="font-bold text-gray-800 text-sm mb-1">DevOps & Automation</h3>
                                 <div className="flex flex-wrap gap-1">
-                                    {['Docker', 'Kubernetes', 'Ansible', 'Jenkins', 'Terraform', 'GitLab CI', 'Bash'].map(s => (
+                                    {['Docker', 'Kubernetes', , 'OpenShift', 'Ansible', 'Jenkins', 'Terraform', 'GitLab CI', 'Bash'].map(s => (
                                         <span key={s} className="bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium">{s}</span>
                                     ))}
                                 </div>
