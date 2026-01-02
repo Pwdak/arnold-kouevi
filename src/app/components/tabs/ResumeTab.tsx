@@ -1,10 +1,10 @@
 "use client";
 
-import { Mail, Phone, MapPin, Globe, Linkedin, Download } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Download, Printer } from 'lucide-react';
 
 export default function ResumeTab() {
     return (
-        <div className="w-full max-w-4xl mx-auto bg-white text-black p-8 md:p-12 shadow-2xl rounded-lg font-sans">
+        <div className="resume-container w-full max-w-4xl mx-auto bg-white text-black p-8 md:p-12 shadow-2xl rounded-lg font-sans">
             {/* --- Header --- */}
             <header className="border-b-2 border-gray-800 pb-8 mb-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                 <div>
@@ -166,12 +166,22 @@ export default function ResumeTab() {
                 </div>
             </div>
             
-            <div className="mt-12 pt-6 border-t border-gray-200 text-center">
-                 <a href="/Arnold_Kouevi_Admin_Linux.pdf" download
-                   className="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition-colors text-sm">
+            <div className="mt-12 pt-6 border-t border-gray-200 text-center flex items-center justify-center gap-4">
+                 <button
+                   onClick={() => window.print()}
+                   className="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition-colors text-sm"
+                 >
+                    <Printer size={16} />
+                    Print to PDF
+                 </button>
+                 <a
+                   href="/Arnold_Kouevi_Admin_Linux.pdf"
+                   download
+                   className="inline-flex items-center gap-2 px-6 py-2 bg-gray-200 text-gray-900 font-semibold rounded hover:bg-gray-300 transition-colors text-sm"
+                 >
                     <Download size={16} />
-                    Download PDF Version
-                </a>
+                    Download Existing PDF
+                 </a>
             </div>
         </div>
     );

@@ -8,7 +8,7 @@ import { CursorTrail } from './components/CursorTrail';
 const spaceGrotesk = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Arnold Kouevi | Linux System Administrator | DevOps Engineer",
+  title: "Arnold Kouevi | Linux System Administrator | Cloud & DevOps Engineer",
   description: "Portfolio of Arnold Kouevi, specialized in Linux System Administration and DevOps, based on his CV.",
 };
 
