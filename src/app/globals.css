@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    color: rgb(var(--text-primary)); /* On utilise la nouvelle variable ici */
+    color: rgb(var(--text-primary));
     background: rgb(var(--background-rgb));
     min-height: 100vh;
   }
@@ -62,3 +62,32 @@
 }
 @keyframes animate-aurora-1 { 0% { transform: translate(-20%, -20%); } 50% { transform: translate(100%, 80%); } 100% { transform: translate(20%, -40%); } }
 @keyframes animate-aurora-2 { 0% { transform: translate(80%, 100%); } 50% { transform: translate(0%, 0%); } 100% { transform: translate(100%, -10%); } }
+
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .aurora-background, .dark .aurora-background {
+    display: none !important;
+  }
+  .resume-container {
+    width: 210mm;
+    max-width: 210mm;
+    padding: 12mm;
+    box-shadow: none !important;
+    border-radius: 0;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .resume-container .text-blue-600 {
+    color: #0f172a !important;
+  }
+  .resume-container .border-gray-200 {
+    border-color: #e5e7eb !important;
+  }
+  .resume-container .bg-blue-600,
+  .resume-container .bg-gray-200 {
+    display: none !important;
+  }
+}
