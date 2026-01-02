@@ -31,26 +31,9 @@ export default function ResumeTab() {
                 </div>
             </header>
 
-            <div className="w-full max-w-5xl mx-auto rounded-lg overflow-hidden mb-8">
-                <object
-                    data="/Arnold_Kouevi_Admin_Linux.pdf#view=FitH"
-                    type="application/pdf"
-                    className="w-full h-[80vh]"
-                >
-                    <div className="p-6 text-center">
-                        <a
-                            href="/Arnold_Kouevi_Admin_Linux.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 text-accent font-semibold rounded-full border border-accent/30 hover:bg-accent/20 transition-colors"
-                        >
-                            Open Resume PDF
-                        </a>
-                    </div>
-                </object>
-            </div>
+            {/* Affichage CV-style (retour à la version précédente) */}
 
-            <div className="hidden">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 {/* --- Left Column (Main Content) --- */}
                 <div className="md:col-span-2 space-y-10">
                     
@@ -185,7 +168,7 @@ export default function ResumeTab() {
                 </div>
             </div>
             
-            <div className="hidden">
+            <div className="mt-12 pt-6 border-t border-gray-200 text-center flex items-center justify-center gap-4">
                  <button
                    onClick={() => window.print()}
                    className="inline-flex items-center gap-2 px-6 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition-colors text-sm"
