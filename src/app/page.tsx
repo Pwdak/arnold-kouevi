@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Home as HomeIcon, Briefcase, Code, Award, FileText } from "lucide-react";
 
@@ -10,38 +10,21 @@ import ExperienceTab from "./components/tabs/ExperienceTab";
 import ProjectsTab from "./components/tabs/ProjectsTab";
 import CertificationsTab from "./components/tabs/CertificationsTab";
 import ResumeTab from "./components/tabs/ResumeTab";
-import { ThemeToggle } from "./components/ThemeToggle";
-import { LanguageToggle } from "./components/LanguageToggle";
-
-export default function Home() {
-    // Le tableau final des onglets avec tous les composants réels
-    const tabs = [
-        { id: "home", label: "Home", icon: HomeIcon, component: <HomeTab /> },
-        { id: "experience", label: "Experience", icon: Briefcase, component: <ExperienceTab /> },
-        { id: "projects", label: "Projects", icon: Code, component: <ProjectsTab /> },
-        { id: "certifications", label: "Certifications", icon: Award, component: <CertificationsTab /> },
-        { id: "resume", label: "Resume", icon: FileText, component: <ResumeTab /> },
-    ];
-
-    const [activeTab, setActiveTab] = useState(tabs[0].id);
-    const [printRequested, setPrintRequested] = useState(false);
-
-    useEffect(() => {
-        const params = new URLSearchParams(window.location.search);
-        const tabParam = params.get("tab");
-        const printParam = params.get("print");
-        if (tabParam) {
-            const found = tabs.find(t => t.id === tabParam);
-            if (found) setActiveTab(found.id);
-        }
-        if (printParam === "1") setPrintRequested(true);
-    }, []);
-
-    useEffect(() => {
-        if (printRequested && activeTab === "resume") {
-            setTimeout(() => { window.print(); }, 300);
-        }
-    }, [printRequested, activeTab]);
+ import { ThemeToggle } from "./components/ThemeToggle";
+ import { LanguageToggle } from "./components/LanguageToggle";
+ 
+ export default function Home() {
+     // Le tableau final des onglets avec tous les composants réels
+     const tabs = [
+         { id: "home", label: "Home", icon: HomeIcon, component: <HomeTab /> },
+         { id: "experience", label: "Experience", icon: Briefcase, component: <ExperienceTab /> },
+         { id: "projects", label: "Projects", icon: Code, component: <ProjectsTab /> },
+         { id: "certifications", label: "Certifications", icon: Award, component: <CertificationsTab /> },
+         { id: "resume", label: "Resume", icon: FileText, component: <ResumeTab /> },
+     ];
+ 
+     const [activeTab, setActiveTab] = useState(tabs[0].id);
+ 
 
     // Trouve le composant à afficher en fonction de l'onglet actif
     const activeContent = tabs.find((tab) => tab.id === activeTab)?.component;
