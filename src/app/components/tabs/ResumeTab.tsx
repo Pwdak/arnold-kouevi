@@ -41,7 +41,7 @@ export default function ResumeTab() {
                     <section>
                         <h2 className="text-xl font-bold uppercase tracking-wider text-blue-700 border-b border-gray-300 pb-2 mb-4">Professional Summary</h2>
                         <p className="text-gray-700 leading-relaxed text-justify">
-                            Passionate and certified Linux System Administrator with over 6 years of experience in DevOps engineering. 
+                            Passionate and certified Linux System Administrator with over 7 years of experience in DevOps engineering. 
                             Specialized in managing on-premise and cloud (AWS) infrastructures, virtualization (VMware), containerization (Docker, Kubernetes), 
                             and automation (Ansible, Jenkins). Proven track record of optimizing systems, reducing management time through automation, 
                             and ensuring high availability and security of critical environments.
