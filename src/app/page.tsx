@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Home as HomeIcon, Briefcase, Code, Award } from "lucide-react";
+import { Home as HomeIcon, Briefcase, Code, Award, FileText } from "lucide-react";
 
 // Import de tous les composants d'onglets finalisés
 import HomeTab from "./components/tabs/HomeTab";
 import ExperienceTab from "./components/tabs/ExperienceTab";
 import ProjectsTab from "./components/tabs/ProjectsTab";
 import CertificationsTab from "./components/tabs/CertificationsTab";
+import ResumeTab from "./components/tabs/ResumeTab";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { LanguageToggle } from "./components/LanguageToggle";
 
