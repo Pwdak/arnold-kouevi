@@ -37,7 +37,7 @@ export default function Home() {
                 {/* --- Section Entête / Profil --- */}
                 <div className="flex flex-col items-center mb-8 text-center">
                     <h1 className="text-3xl md:text-4xl font-bold text-primary">ARNOLD KOUEVI</h1>
-                    <p className="text-base md:text-lg text-secondary mt-1">Systems & Network Engineer | Cloud & DevOps | Cybersecurity</p>
+                    <p className="text-base md:text-lg text-secondary mt-1">Linux System Administrator | DevOps Engineer</p>
                 </div>
 
                 {/* --- Section Navigation par Onglets (Responsive) --- */}
@@ -69,8 +69,8 @@ export default function Home() {
                 </div>
 
                 {/* --- Section Contenu de l'Onglet (Responsive) --- */}
-                <div className="group relative w-full min-h-[400px] p-4 md:p-8 bg-black/30 border border-white/10 rounded-2xl shadow-2xl backdrop-blur-xl">
-                    <div className="absolute -inset-px bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl opacity-0 group-hover:opacity-70 transition duration-500" style={{ filter: 'blur(15px)' }}></div>
+                <div className="group relative w-full min-h-[400px] p-4 md:p-8 bg-card-bg border border-white/10 rounded-2xl shadow-2xl backdrop-blur-xl">
+                    <div className="absolute -inset-px bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl opacity-0 group-hover:opacity-70 transition duration-500" style={{ filter: 'blur(15px)' }}></div>
                     <div className="relative">
                         <AnimatePresence mode="wait">
                             <motion.div
