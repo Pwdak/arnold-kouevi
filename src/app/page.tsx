@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Home as HomeIcon, Briefcase, Code, Award, FileText } from "lucide-react";
 
@@ -20,9 +20,28 @@ export default function Home() {
         { id: "experience", label: "Experience", icon: Briefcase, component: <ExperienceTab /> },
         { id: "projects", label: "Projects", icon: Code, component: <ProjectsTab /> },
         { id: "certifications", label: "Certifications", icon: Award, component: <CertificationsTab /> },
+        { id: "resume", label: "Resume", icon: FileText, component: <ResumeTab /> },
     ];
 
     const [activeTab, setActiveTab] = useState(tabs[0].id);
+    const [printRequested, setPrintRequested] = useState(false);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const tabParam = params.get("tab");
+        const printParam = params.get("print");
+        if (tabParam) {
+            const found = tabs.find(t => t.id === tabParam);
+            if (found) setActiveTab(found.id);
+        }
+        if (printParam === "1") setPrintRequested(true);
+    }, []);
+
+    useEffect(() => {
+        if (printRequested && activeTab === "resume") {
+            setTimeout(() => { window.print(); }, 300);
+        }
+    }, [printRequested, activeTab]);
 
     // Trouve le composant à afficher en fonction de l'onglet actif
     const activeContent = tabs.find((tab) => tab.id === activeTab)?.component;
