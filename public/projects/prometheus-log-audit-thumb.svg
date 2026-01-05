@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ef4444"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="630" fill="url(#bg)"/>
+
+  <g transform="translate(80,100)">
+    <rect x="0" y="0" width="1040" height="430" rx="20" fill="#111827" stroke="#374151" stroke-width="2"/>
+
+    <text x="40" y="90" fill="#fff" font-size="46" font-family="Segoe UI, Roboto, Arial" font-weight="700">
+      Prometheus Alert Tuning Lab
+    </text>
+    <text x="40" y="140" fill="#9ca3af" font-size="22" font-family="Segoe UI, Roboto, Arial">
+      Quarterly alert audit • Noise reduction • Actionable signals preserved
+    </text>
+
+    <g transform="translate(40,190)">
+      <rect x="0" y="0" width="320" height="200" rx="14" fill="#0b1220" stroke="#1f2937"/>
+      <circle cx="60" cy="70" r="40" fill="url(#accent)"/>
+      <rect x="115" y="40" width="170" height="18" rx="9" fill="#1f2937"/>
+      <rect x="115" y="70" width="140" height="18" rx="9" fill="#1f2937"/>
+      <text x="20" y="160" fill="#e5e7eb" font-size="18" font-family="Segoe UI, Roboto, Arial">PromQL • p95 • topk()</text>
+    </g>
+
+    <g transform="translate(390,190)">
+      <rect x="0" y="0" width="320" height="200" rx="14" fill="#0b1220" stroke="#1f2937"/>
+      <rect x="30" y="40" width="260" height="25" rx="12" fill="#ef4444"/>
+      <rect x="30" y="80" width="220" height="25" rx="12" fill="#f59e0b"/>
+      <rect x="30" y="120" width="180" height="25" rx="12" fill="#10b981"/>
+      <text x="20" y="160" fill="#e5e7eb" font-size="18" font-family="Segoe UI, Roboto, Arial">Tuned thresholds &amp; for:</text>
+    </g>
+
+    <g transform="translate(740,190)">
+      <rect x="0" y="0" width="300" height="200" rx="14" fill="#0b1220" stroke="#1f2937"/>
+      <rect x="30" y="40" width="240" height="25" rx="12" fill="#1f2937"/>
+      <rect x="30" y="80" width="240" height="25" rx="12" fill="#1f2937"/>
+      <rect x="30" y="120" width="240" height="25" rx="12" fill="#1f2937"/>
+      <text x="20" y="160" fill="#e5e7eb" font-size="18" font-family="Segoe UI, Roboto, Arial">Alertmanager routing &amp; inhibition</text>
+    </g>
+
+    <text x="40" y="420" fill="#9ca3af" font-size="18" font-family="Segoe UI, Roboto, Arial">
+      Docker Compose • Node/Express • Exporters (Node, Postgres, Redis)
+    </text>
+  </g>
+</svg>
