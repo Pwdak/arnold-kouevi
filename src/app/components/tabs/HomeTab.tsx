@@ -74,7 +74,7 @@ export default function HomeTab() {
                     ))}
                 </div>
 
-                <a href="/Arnold_Kouevi_Admin_Linux.pdf" download
+                <a href="/Arnold_KOUEVI_DevOps.pdf" download
                    className="inline-flex items-center gap-2 px-6 py-3 bg-accent/10 text-accent font-semibold rounded-full border border-accent/30 hover:bg-accent/20 transition-colors">
                     <Download size={18} />
                     Download my resume

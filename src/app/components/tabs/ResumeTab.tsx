@@ -114,7 +114,7 @@ export default function ResumeTab() {
                             <div>
                                 <h3 className="font-bold text-gray-800 text-sm mb-1">DevOps & Automation</h3>
                                 <div className="flex flex-wrap gap-1">
-                                    {['Docker', 'Kubernetes', , 'OpenShift', 'Ansible', 'Jenkins', 'Terraform', 'GitLab CI', 'Bash'].map(s => (
+                                    {['Docker', 'Kubernetes', 'OpenShift', 'Ansible', 'Jenkins', 'Terraform', 'GitLab CI', 'Bash'].map(s => (
                                         <span key={s} className="bg-gray-100 text-gray-700 px-2 py-0.5 rounded text-xs font-medium">{s}</span>
                                     ))}
                                 </div>
@@ -177,7 +177,7 @@ export default function ResumeTab() {
                     Print to PDF
                  </button>
                  <a
-                   href="/Arnold_Kouevi_Admin_Linux.pdf"
+                   href="/Arnold_KOUEVI_DevOps.pdf"
                    download
                    className="inline-flex items-center gap-2 px-6 py-2 bg-gray-200 text-gray-900 font-semibold rounded hover:bg-gray-300 transition-colors text-sm"
                  >
